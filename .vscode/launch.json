@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/luisa/OneDrive/Documentos/GitHub/Estrutura-de-Dados/Projeto1/src",
-      "program": "c:/Users/luisa/OneDrive/Documentos/GitHub/Estrutura-de-Dados/Projeto1/src/build/Debug/outDebug",
+      "cwd": "c:/Users/beref/OneDrive/Documents/Estrutura-de-Dados/TP04",
+      "program": "c:/Users/beref/OneDrive/Documents/Estrutura-de-Dados/TP04/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
