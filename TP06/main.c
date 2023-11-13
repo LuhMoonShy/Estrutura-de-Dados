@@ -1,42 +1,31 @@
 #include "matriz.h"
-#include <stdio.h>
 
 int main() {
-    Matriz matA = inicializaMatriz(4, 4);
-    Matriz matB = inicializaMatriz(4, 4);
+    FILE *arquivoA = fopen("matrizA.txt", "r");
+    FILE *arquivoB = fopen("matrizB.txt", "r");
 
-    insereElemento(&matA, 1, 1, 50.0);
-    insereElemento(&matA, 2, 1, 10.0);
-    insereElemento(&matA, 2, 3, 20.0);
-    insereElemento(&matA, 4, 1, -30.0);
-    insereElemento(&matA, 4, 3, -60.0);
-    insereElemento(&matA, 4, 4, -5.0);
-
-    insereElemento(&matB, 1, 1, 50.0);
-    insereElemento(&matB, 2, 1, 10.0);
-    insereElemento(&matB, 2, 3, 20.0);
-    insereElemento(&matB, 4, 1, -30.0);
-    insereElemento(&matB, 4, 3, -60.0);
-    insereElemento(&matB, 4, 4, -5.0);
+    Matriz A = leMatriz(arquivoA);
+    Matriz B = leMatriz(arquivoB);
 
     printf("Matriz A:\n");
-    imprimeMatriz(&matA);
+    imprimeMatriz(A);
+    printf("\n");
 
-    printf("\nMatriz B:\n");
-    imprimeMatriz(&matB);
+    printf("Matriz B:\n");
+    imprimeMatriz(B);
+    printf("\n");
 
-    Matriz matSoma = somaMatrizes(&matA, &matB);
-    printf("\nSoma de A e B:\n");
-    imprimeMatriz(&matSoma);
+    Matriz soma = somaMatrizes(A, B);
+    printf("Soma de A e B:\n");
+    imprimeMatriz(soma);
+    printf("\n");
 
-    Matriz matProduto = multiplicaMatrizes(&matA, &matB);
-    printf("\nProduto de A e B:\n");
-    imprimeMatriz(&matProduto);
+    Matriz produto = multiplicaMatrizes(A, B);
+    printf("Produto de A e B:\n");
+    imprimeMatriz(produto);
 
-    liberaMatriz(&matA);
-    liberaMatriz(&matB);
-    liberaMatriz(&matSoma);
-    liberaMatriz(&matProduto);
+    fclose(arquivoA);
+    fclose(arquivoB);
 
     return 0;
 }
