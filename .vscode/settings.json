@@ -57,5 +57,8 @@
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "cmake.configureOnOpen": true,
   "C_Cpp.errorSquiggles": "enabled",
-  "C_Cpp_Runner.msvcSecureNoWarnings": false
+  "C_Cpp_Runner.msvcSecureNoWarnings": false,
+  "files.associations": {
+    "stdio.h": "c"
+  }
 }
